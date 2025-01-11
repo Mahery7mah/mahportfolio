@@ -1,0 +1,108 @@
+.bug-container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    height: 200px;
+    width: 100%;
+  }
+  
+  .bug-triangle {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+  
+    &.visible {
+      opacity: 1;
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  
+    &.hidden {
+      opacity: 0;
+      transform: translateX(20px) translateY(20px) rotate(15deg);
+    }
+  
+    &:nth-child(1) {
+      animation: bugEffect1 2s infinite;
+    }
+  
+    &:nth-child(2) {
+      animation: bugEffect2 3s infinite;
+    }
+  
+    &:nth-child(3) {
+      animation: bugEffect3 1.5s infinite;
+    }
+  }
+  
+  // Animation de bug irrégulière
+  @keyframes bugEffect1 {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 0.8;
+    }
+    40% {
+      transform: scale(0.9) rotate(-5deg);
+      opacity: 0.6;
+    }
+    60% {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 0.8;
+    }
+    80% {
+      transform: scale(0.9) rotate(-5deg);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bugEffect2 {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.2) rotate(5deg);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(0.8) rotate(-5deg);
+      opacity: 0.7;
+    }
+    75% {
+      transform: scale(1.2) rotate(5deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bugEffect3 {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    30% {
+      transform: scale(0.8) rotate(10deg);
+      opacity: 0.6;
+    }
+    60% {
+      transform: scale(1.1) rotate(-10deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }

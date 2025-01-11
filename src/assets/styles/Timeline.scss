@@ -1,0 +1,112 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+  text-align: left;
+}
+
+.date {
+  font-family: 'Courier Prime', monospace;
+  color: rgb(189, 189, 189) !important;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.carousel-image img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-justify: distribute;
+}
+
+.date, h3, h4, p, .stack, h6 {
+  margin: 5px 0;
+}
+
+h6 {
+  font-size: 12pt !important;
+  color: #7dff00 !important;
+  transition: color 0.3s ease;
+}
+
+h6:hover {
+  color: rgb(0, 172, 106) !important;
+}
+
+.carousel-button {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+top: 100px !important;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.carousel-button.left {
+  position: absolute;
+
+  left: -50px !important;
+  z-index: 999 !important;
+}
+
+.carousel-button.right {
+  position: absolute;
+  right: -50px !important;
+  z-index: 999 !important;
+}
+
+
+.carousel-button:hover {
+  color: #7dff00;
+}
+
+@media (max-width: 700px) {
+  .projects-container {
+    padding: 5%;
+  }
+
+  .carousel-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .carousel-button {
+    font-size: 1.2rem;
+  }
+  a .projectimg {
+    width: 50% !important;
+  }
+}

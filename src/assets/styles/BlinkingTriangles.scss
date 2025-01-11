@@ -1,0 +1,34 @@
+.triangle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; // Adjust for spacing between triangles
+  }
+  
+  .triangle {
+    width: 20px; // Set to the desired size
+    height: auto;
+    opacity: 0;
+    animation: blink 1.5s infinite ease-in-out;
+  }
+  
+  .triangle-1 {
+    animation-delay: 0s;
+  }
+  
+  .triangle-2 {
+    animation-delay: 0.5s;
+  }
+  
+  .triangle-3 {
+    animation-delay: 1s;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
